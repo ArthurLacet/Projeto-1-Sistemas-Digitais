@@ -1,0 +1,117 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001d1b0a29850 .scope module, "comparador_8_bits_tb" "comparador_8_bits_tb" 2 4;
+ .timescale -9 -12;
+v000001d1b0a7f720_0 .var "A_TB", 7 0;
+v000001d1b0a7fae0_0 .var "B_TB", 7 0;
+v000001d1b0a7edc0_0 .net "E_TB", 0 0, L_000001d1b0a80b00;  1 drivers
+v000001d1b0a7f180_0 .net "G_TB", 0 0, L_000001d1b0a80e80;  1 drivers
+v000001d1b0a7f860_0 .net "L_TB", 0 0, L_000001d1b0a80e10;  1 drivers
+S_000001d1b0a299e0 .scope module, "UUT" "comparador_8_bits" 2 9, 3 2 0, S_000001d1b0a29850;
+ .timescale -9 -12;
+    .port_info 0 /OUTPUT 1 "G";
+    .port_info 1 /OUTPUT 1 "L";
+    .port_info 2 /OUTPUT 1 "E";
+    .port_info 3 /INPUT 8 "A";
+    .port_info 4 /INPUT 8 "B";
+L_000001d1b0a80b00 .functor AND 1, L_000001d1b0a7fea0, L_000001d1b0a806c0, C4<1>, C4<1>;
+L_000001d1b0a80a90 .functor AND 1, L_000001d1b0a7fe00, L_000001d1b0a806c0, C4<1>, C4<1>;
+L_000001d1b0a80e10 .functor OR 1, L_000001d1b0a80580, L_000001d1b0a80a90, C4<0>, C4<0>;
+L_000001d1b0a808d0 .functor NOT 1, L_000001d1b0a80e10, C4<0>, C4<0>, C4<0>;
+L_000001d1b0a80a20 .functor NOT 1, L_000001d1b0a80b00, C4<0>, C4<0>, C4<0>;
+L_000001d1b0a80e80 .functor AND 1, L_000001d1b0a808d0, L_000001d1b0a80a20, C4<1>, C4<1>;
+v000001d1b0a75150_0 .net "A", 7 0, v000001d1b0a7f720_0;  1 drivers
+v000001d1b0a74cf0_0 .net "B", 7 0, v000001d1b0a7fae0_0;  1 drivers
+v000001d1b0a74a70_0 .net "E", 0 0, L_000001d1b0a80b00;  alias, 1 drivers
+v000001d1b0a74d90_0 .net "E1", 0 0, L_000001d1b0a7fea0;  1 drivers
+v000001d1b0a74f70_0 .net "E2", 0 0, L_000001d1b0a806c0;  1 drivers
+v000001d1b0a75650_0 .net "G", 0 0, L_000001d1b0a80e80;  alias, 1 drivers
+v000001d1b0a74c50_0 .net "G1", 0 0, L_000001d1b0a7ebe0;  1 drivers
+v000001d1b0a75790_0 .net "G2", 0 0, L_000001d1b0a804e0;  1 drivers
+v000001d1b0a75010_0 .net "L", 0 0, L_000001d1b0a80e10;  alias, 1 drivers
+v000001d1b0a750b0_0 .net "L1", 0 0, L_000001d1b0a7fe00;  1 drivers
+v000001d1b0a75290_0 .net "L2", 0 0, L_000001d1b0a80580;  1 drivers
+v000001d1b0a755b0_0 .net *"_ivl_1", 3 0, L_000001d1b0a80260;  1 drivers
+v000001d1b0a74b10_0 .net *"_ivl_13", 3 0, L_000001d1b0a80300;  1 drivers
+v000001d1b0a75330_0 .net *"_ivl_19", 0 0, L_000001d1b0a80a90;  1 drivers
+v000001d1b0a756f0_0 .net *"_ivl_22", 0 0, L_000001d1b0a808d0;  1 drivers
+v000001d1b0a75470_0 .net *"_ivl_24", 0 0, L_000001d1b0a80a20;  1 drivers
+v000001d1b0a74890_0 .net *"_ivl_5", 3 0, L_000001d1b0a7f2c0;  1 drivers
+v000001d1b0a74930_0 .net *"_ivl_9", 3 0, L_000001d1b0a80440;  1 drivers
+v000001d1b0a801c0_0 .net "a1", 3 0, L_000001d1b0a7ea00;  1 drivers
+v000001d1b0a80120_0 .net "a2", 3 0, L_000001d1b0a7f360;  1 drivers
+v000001d1b0a80080_0 .net "b1", 3 0, L_000001d1b0a7fcc0;  1 drivers
+v000001d1b0a7f220_0 .net "b2", 3 0, L_000001d1b0a7f9a0;  1 drivers
+L_000001d1b0a80260 .part v000001d1b0a7f720_0, 0, 4;
+L_000001d1b0a7ea00 .concat [ 4 0 0 0], L_000001d1b0a80260;
+L_000001d1b0a7f2c0 .part v000001d1b0a7f720_0, 4, 4;
+L_000001d1b0a7f360 .concat [ 4 0 0 0], L_000001d1b0a7f2c0;
+L_000001d1b0a80440 .part v000001d1b0a7fae0_0, 0, 4;
+L_000001d1b0a7fcc0 .concat [ 4 0 0 0], L_000001d1b0a80440;
+L_000001d1b0a80300 .part v000001d1b0a7fae0_0, 4, 4;
+L_000001d1b0a7f9a0 .concat [ 4 0 0 0], L_000001d1b0a80300;
+S_000001d1b0a29b70 .scope module, "LSB" "comparador_4_bits" 3 14, 4 1 0, S_000001d1b0a299e0;
+ .timescale -9 -12;
+    .port_info 0 /OUTPUT 1 "G";
+    .port_info 1 /OUTPUT 1 "E";
+    .port_info 2 /OUTPUT 1 "L";
+    .port_info 3 /INPUT 4 "A";
+    .port_info 4 /INPUT 4 "B";
+v000001d1b0a1b210_0 .net "A", 3 0, L_000001d1b0a7ea00;  alias, 1 drivers
+v000001d1b0a263a0_0 .net "B", 3 0, L_000001d1b0a7fcc0;  alias, 1 drivers
+v000001d1b0a245c0_0 .net "E", 0 0, L_000001d1b0a7fea0;  alias, 1 drivers
+v000001d1b0a749d0_0 .net "G", 0 0, L_000001d1b0a7ebe0;  alias, 1 drivers
+v000001d1b0a753d0_0 .net "L", 0 0, L_000001d1b0a7fe00;  alias, 1 drivers
+L_000001d1b0a7ebe0 .cmp/gt 4, L_000001d1b0a7ea00, L_000001d1b0a7fcc0;
+L_000001d1b0a7fea0 .cmp/eq 4, L_000001d1b0a7ea00, L_000001d1b0a7fcc0;
+L_000001d1b0a7fe00 .cmp/gt 4, L_000001d1b0a7fcc0, L_000001d1b0a7ea00;
+S_000001d1b0a24660 .scope module, "MSB" "comparador_4_bits" 3 15, 4 1 0, S_000001d1b0a299e0;
+ .timescale -9 -12;
+    .port_info 0 /OUTPUT 1 "G";
+    .port_info 1 /OUTPUT 1 "E";
+    .port_info 2 /OUTPUT 1 "L";
+    .port_info 3 /INPUT 4 "A";
+    .port_info 4 /INPUT 4 "B";
+v000001d1b0a74bb0_0 .net "A", 3 0, L_000001d1b0a7f360;  alias, 1 drivers
+v000001d1b0a751f0_0 .net "B", 3 0, L_000001d1b0a7f9a0;  alias, 1 drivers
+v000001d1b0a74e30_0 .net "E", 0 0, L_000001d1b0a806c0;  alias, 1 drivers
+v000001d1b0a75510_0 .net "G", 0 0, L_000001d1b0a804e0;  alias, 1 drivers
+v000001d1b0a74ed0_0 .net "L", 0 0, L_000001d1b0a80580;  alias, 1 drivers
+L_000001d1b0a804e0 .cmp/gt 4, L_000001d1b0a7f360, L_000001d1b0a7f9a0;
+L_000001d1b0a806c0 .cmp/eq 4, L_000001d1b0a7f360, L_000001d1b0a7f9a0;
+L_000001d1b0a80580 .cmp/gt 4, L_000001d1b0a7f9a0, L_000001d1b0a7f360;
+    .scope S_000001d1b0a29850;
+T_0 ;
+    %vpi_call 2 13 "$dumpfile", "q5_letraE_tb.vcd" {0 0 0};
+    %vpi_call 2 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001d1b0a29850 {0 0 0};
+    %pushi/vec4 64, 0, 8;
+    %store/vec4 v000001d1b0a7f720_0, 0, 8;
+    %pushi/vec4 64, 0, 8;
+    %store/vec4 v000001d1b0a7fae0_0, 0, 8;
+    %delay 10000, 0;
+    %pushi/vec4 65, 0, 8;
+    %store/vec4 v000001d1b0a7f720_0, 0, 8;
+    %pushi/vec4 64, 0, 8;
+    %store/vec4 v000001d1b0a7fae0_0, 0, 8;
+    %delay 10000, 0;
+    %pushi/vec4 64, 0, 8;
+    %store/vec4 v000001d1b0a7f720_0, 0, 8;
+    %pushi/vec4 65, 0, 8;
+    %store/vec4 v000001d1b0a7fae0_0, 0, 8;
+    %delay 10000, 0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "q5_letraE_tb.v";
+    "./q5_letraD.v";
+    "./q5_letraC.v";
